@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#7a0c6e",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "南开大学荷花节邀请函生成器"
+  }
+}
