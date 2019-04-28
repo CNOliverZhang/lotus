@@ -1,23 +1,13 @@
-<view>
-  <text class='mine'>我的邀请函</text>
-  <text class='event'>南开大学荷花节</text>
-  <text class='message'>留下你的荷花寄语</text>
-  <view class='inputBox'>
-    <input placeholder='输入荷花节想说的话' maxlength='10' class='input' bindinput='bindKeyInput'/>
-  </view>
-  <text class='notice'>生成专属邀请函需要您授权我们获取您的的头像和昵称。您也可以拒绝授权，此时我们将使用默认头像和昵称生成海报。</text>
-  <text class='shareText'>分享给好友或生成专属邀请函</text>
-  <view class='imgBox'>
-    <button class='shareOption' open-type='share'><image src='{{wechat}}' class='img'></image></button>
-    <button class='shareOption marginLeft' open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'><image src='{{moments}}' class='img'></image></button>
-  </view>
-  <view class='imagePathBox' hidden='{{maskHidden == false}}'>
-    <image src='{{imagePath}}' class='generate'></image>
-    <button class='cancel' bindtap='cancel'>取消保存</button>
-    <button class='save' bindtap='save'>保存图片</button>
-  </view>
-  <view hidden='{{maskHidden == false}}' class='mask'></view> 
-  <view class='canvas-box'>
-      <canvas style='width: 375px;height: 667px;position:fixed;top:9999px' canvas-id='mycanvas'/>
-  </view>  
+<view class='zoom'>
+  <view class='zoom-text'>缩小</view>
+  <slider class='zoom-slider' min='1' max='4' step='1' block-size='20' activeColor='#84fab0' bindchange='scale' bindchanging='scale'></slider>
+  <view class='zoom-text'>放大</view>
 </view>
+<movable-area class='holder' scale-area='true'>
+  <movable-view style='width: {{width}}px; height: {{height}}px' x='{{x}}' y='{{y}}' direction='all'>
+    <view wx:for='{{areas}}' wx:key='index'>
+      <button class='area' hover-class='area__hover' style='{{item.style}}' id='{{item.index}}'></button>
+    </view>
+    <image class='map' mode='aspectFill' src='{{mapImage}}'></image>
+  </movable-view>
+</movable-area>
