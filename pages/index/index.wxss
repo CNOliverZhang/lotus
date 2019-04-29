@@ -16,27 +16,34 @@ button::after {
 .zoom {
   position: fixed;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  left: 80rpx;
   right: 80rpx;
   bottom: 80rpx;
+  height: 300rpx;
+  overflow: visible;
   z-index: 10;
-  height: 80rpx;
-  border-radius: 40rpx;
-  background-color: rgba(0, 0, 0, 0.5)
 }
 
-.zoom-slider {
-  flex-grow: 1;
+.zoom-button {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #333333;
+  background-color: #ffffff;
+  box-shadow: 5rpx 5rpx 5rpx #333333;
+  filter: brightness(1);
+  transition: 0.5s;
 }
 
-.zoom-text {
-  font-size: 24rpx;
-  color: #ffffff;
-  margin-left: 24rpx;
-  margin-right: 24rpx;
+.zoom-button__hover {
+  filter: brightness(0.7);
+  transition: 0.5s;
 }
 
 .holder {
@@ -53,7 +60,7 @@ button::after {
   height: 100%;
 }
 
-.area {
+.position {
   position: absolute;
   width: 10vw;
   height: 10vw; 
@@ -62,12 +69,12 @@ button::after {
   transition: 1s;
 }
 
-.area image {
-  width: 100%;
-  height: 100%;
-}
-
-.area__hover {
+.position__hover {
   filter: brightness(0.5);
   transition: 1s;
+}
+
+.flag {
+  width: 100%;
+  height: 100%;
 }

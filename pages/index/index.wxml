@@ -1,15 +1,14 @@
 <view class='zoom'>
-  <view class='zoom-text'>缩小</view>
-  <slider class='zoom-slider' min='1' max='4' step='0.1' block-size='20' activeColor='#84fab0' bindchange='scale' bindchanging='scale'></slider>
-  <view class='zoom-text'>放大</view>
+  <button class='zoom-button' hover-class='zoom-button__hover' bindtap='scale' data-action='1'>放大</button>
+  <button class='zoom-button' hover-class='zoom-button__hover' bindtap='scale' data-action='-1'>缩小</button>
 </view>
 <movable-area class='holder' scale-area='true'>
-  <movable-view style='width: {{width}}px; height: {{height}}px' x='{{x}}' y='{{y}}' direction='all'>
-    <view wx:for='{{areas}}' wx:key='index'>
-      <button class='area' hover-class='area__hover' style='{{item.style}}' id='{{item.index}}'>
-        <image mode='aspectFit' src="/images/flag{{item.checked ? '_checked' : ''}}.png"></image>
+  <movable-view style='width: {{width}}px; height: {{height}}px' x='{{x}}' y='{{y}}' direction='all' damping='10000' bindchange='move'>
+    <image class='map' mode='aspectFill' src='{{mapImage}}'></image>
+    <view wx:for='{{positions}}' wx:key='index'>
+      <button class='position' hover-class='position__hover' style='{{item.style}}' id='{{item.index}}'>
+        <image class='flag' mode='aspectFit' src="/images/flag{{item.checked ? '_checked' : ''}}.png"></image>
       </button>
     </view>
-    <image class='map' mode='aspectFill' src='{{mapImage}}'></image>
   </movable-view>
 </movable-area>

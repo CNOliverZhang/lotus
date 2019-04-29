@@ -1,28 +1,16 @@
-var areas = [
+var positions = [
   {
     index: 0,
     name: '主楼',
-    style: 'top: calc(80% - 5vw); left: calc(50% - 5vw);',
-    longitude: '经度',
-    latitude: '维度',
-    radius: 50,
+    style: ' left: calc(65.8149779735% - 5vw); top: calc(59.5602294455% - 5vw);',
+    longitude: 117.1712869406,
+    latitude: 39.1020701973,
+    radius: 100,
     image: '/images/2.png',
     description: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。',
-    checked: false,
-  },
-  {
-    index: 1,
-    name: '',
-    style: 'top: calc(60% - 5vw); left: calc(60% - 5vw);',
-    longitude: '经度',
-    latitude: '维度',
-    radius: 50,
-    image: '/images/2.png',
-    description: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。',
-    checked: true,
   },
 ]
 
 module.exports = {
-  areas: areas
+  positions: positions
 }
