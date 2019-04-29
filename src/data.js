@@ -2,18 +2,25 @@ var areas = [
   {
     index: 0,
     name: '主楼',
-    style: 'width: 10vw; height: 10vw; top: calc(80% - 5vw); left: calc(50% - 5vw);',
+    style: 'top: calc(80% - 5vw); left: calc(50% - 5vw);',
+    longitude: '经度',
+    latitude: '维度',
     radius: 50,
     image: '/images/2.png',
-    description: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。'
+    description: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。',
+    checked: false,
   },
   {
     index: 1,
-    name: '二主楼',
-    style: 'width: 10%; height: 15%; top: 30%; left: 30%;',
+    name: '',
+    style: 'top: calc(60% - 5vw); left: calc(60% - 5vw);',
+    longitude: '经度',
+    latitude: '维度',
+    radius: 50,
     image: '/images/2.png',
-    description: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。'
-  }
+    description: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。',
+    checked: true,
+  },
 ]
 
 module.exports = {

@@ -6,7 +6,9 @@
 <movable-area class='holder' scale-area='true'>
   <movable-view style='width: {{width}}px; height: {{height}}px' x='{{x}}' y='{{y}}' direction='all'>
     <view wx:for='{{areas}}' wx:key='index'>
-      <button class='area' hover-class='area__hover' style='{{item.style}}' id='{{item.index}}'></button>
+      <button class='area' hover-class='area__hover' style='{{item.style}}' id='{{item.index}}'>
+        <image mode='aspectFit' src="/images/flag{{item.checked ? '_checked' : ''}}.png"></image>
+      </button>
     </view>
     <image class='map' mode='aspectFill' src='{{mapImage}}'></image>
   </movable-view>
