@@ -2,7 +2,8 @@ var areas = [
   {
     index: 0,
     name: '主楼',
-    style: 'width: 10%; height: 10%; top: 80%; left: 50%;',
+    style: 'width: 10vw; height: 10vw; top: calc(80% - 5vw); left: calc(50% - 5vw);',
+    radius: 50,
     image: '/images/2.png',
     description: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。'
   },

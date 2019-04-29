@@ -1,6 +1,6 @@
 <view class='zoom'>
   <view class='zoom-text'>缩小</view>
-  <slider class='zoom-slider' min='1' max='4' step='1' block-size='20' activeColor='#84fab0' bindchange='scale' bindchanging='scale'></slider>
+  <slider class='zoom-slider' min='1' max='4' step='0.1' block-size='20' activeColor='#84fab0' bindchange='scale' bindchanging='scale'></slider>
   <view class='zoom-text'>放大</view>
 </view>
 <movable-area class='holder' scale-area='true'>
