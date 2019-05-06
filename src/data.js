@@ -7,7 +7,7 @@ var positions = [
     latitude: 39.1020701973,
     radius: 100,
     image: '/images/2.png',
-    description: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。',
+    description: 'lllllll。',
   },
 ]
 
